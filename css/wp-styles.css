@@ -78,7 +78,7 @@ p.comment-notes {
   font-size: 14px;
 }
 fieldset {
-  width: auto;
+  width: 100%;
   max-width: 100%;
   margin: 0;
   padding: 0;
