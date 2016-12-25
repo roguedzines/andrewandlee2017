@@ -2,9 +2,9 @@
 global $data;
 ?>
 <?php get_header('single'); ?>
-<div class="grid-container">
+<div class="content-wrapper">
   <div class="row">
-    <div class="grid-item col-4">
+    <div class="column column-8">
       <div class="post-content">
 		<?php if(have_posts()): while (have_posts()) : the_post();?>
       <?php //image sizes

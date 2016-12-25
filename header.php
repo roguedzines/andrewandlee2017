@@ -63,10 +63,6 @@ global $data; //fetch options stored in $data
 //run script for threaded comments
 if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 
-<?php if (!empty($data['header_tracking_analytics'])){
-echo stripslashes($data['header_tracking_analytics']);
-}?>
-
 <?php
 
 //require('functions/scripts.php');
@@ -99,14 +95,4 @@ echo stripslashes($data['header_tracking_analytics']);
       </div>
     </div>
 
-  <!-- <div id="social-wrapper">
-    <div class="social-container">
-      <ul>
-        <li><i class="fa fa-instagram fa-lg"></i></li>
-        <li><i class="fa fa-facebook fa-lg"></i></li>
-        <li><i class="fa fa-google-plus fa-lg"></i></li>
-          <li><i class="fa fa-twitter fa-lg"></i></li>
-      </ul>
-    </div>
-  </div> -->
     <div id="main-wrapper">

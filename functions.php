@@ -9,7 +9,7 @@
 // get theme optiions
 global $data;
 /************* INCLUDE NEEDED FILES ***************/
-require_once('admin/index.php' );
+//require_once('admin/index.php' );
 
 //set content width for the theme
 if (!isset ($content_width)){
@@ -21,7 +21,7 @@ require_once('functions/widgets/twitter-widget.php');
 require('functions/better-comments.php');
 require('functions/custom-excerpt.php');
 require('functions/shortcodes/shortcodes.php');
-require_once get_template_directory() . '/plugins/class-tgm-plugin-activation.php';
+//require_once get_template_directory() . '/plugins/class-tgm-plugin-activation.php';
 
 /*--------------Remove junk from header------------*/
 remove_action( 'wp_head', 'rsd_link' );
@@ -58,6 +58,7 @@ add_image_size('front-masonry',600,400, true);
 add_image_size('posts-image-single',540,220, true);
 add_image_size('single-slider-image',540,420, true);
 add_image_size('single-image',1200,800, true);
+add_image_size('front-image',800,400, true);
 }
 
 if ( !is_admin()){

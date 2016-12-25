@@ -9,7 +9,7 @@ if ($data['home_blog_post_count']!='8') {
 	$home_blog_post_count = 4;
 }
 ?>
-<div class="grid-container">
+
 <?php // get posts
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 query_posts(array(
@@ -17,18 +17,13 @@ query_posts(array(
 'posts_per_page'=>$home_blog_post_count)
 );
 ?>
-
+<div class="content-wrapper">
 <?
 if(have_posts()):?>
 
-<?php get_template_part('loop','masonry');
+<?php get_template_part('loop');
 ?>
 <?php endif;?>
 <?php wp_reset_query(); ?>
-  </div>
-	<div class="loadmore-wrap">
-	    <div class="load-more">
-	        <?php next_posts_link ('Load more posts') ?>
-	<span class="load-more-button-load"></span>
-	    </div>
-	</div>
+  <?php if (function_exists('saxonTheme_pagination'))saxonTheme_pagination(); ?>
+</div>
